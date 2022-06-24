@@ -1,0 +1,15 @@
+@value makerWhite from './common/colors.css';
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  margin: auto;
+  width: 90%;
+}
+
+.content {
+  border: 5px;
+  background-color: makerWhite;
+}
