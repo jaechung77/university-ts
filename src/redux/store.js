@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import getSlice from './reducers/get_reducer';
+import uniReducer from './reducers/uni_slice';
 
 const store = configureStore({
   reducer: {
-    allUniversities: getSlice,
+    getUniversities: uniReducer,
   },
 });
 

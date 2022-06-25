@@ -1,5 +1,5 @@
 import './app.css';
-import { fetchUniversities } from './redux/actions/get_actions';
+
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Buttons from './components/buttons/buttons';
@@ -9,10 +9,6 @@ import styles from './app.module.css';
 function App() {
   const universities = useSelector((state) => state);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    const output = dispatch(fetchUniversities());
-  }, []);
 
   return (
     <div className={styles.app}>
