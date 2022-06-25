@@ -6,16 +6,32 @@ const Universities = (props) => {
   const universities = useSelector(
     (state) => state.getUniversities.universities
   );
-  const renderUnis = universities.map((uni, i) => {
-    const { name } = uni;
 
-    return (
+  return (
+    <>
       <div>
-        <ul>{uni.name && <University name={name} />}</ul>
+        <ul>
+          {universities.map((uni, i) => {
+            const { domains, web_pages, name, country, alpha_two_code } = uni;
+            return (
+              <li key={i}>
+                {uni.name && ( //
+                  <University
+                    name={name}
+                    domains={domains}
+                    web_pages={web_pages}
+                    name={name}
+                    country={country}
+                    alpha_two_code={alpha_two_code}
+                  />
+                )}
+              </li>
+            );
+          })}
+        </ul>
       </div>
-    );
-  });
-  return <>{renderUnis}</>;
+    </>
+  );
 };
 
 export default Universities;
