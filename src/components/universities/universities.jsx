@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import University from '../university/university';
 import styles from './universities.module.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Universities = (props) => {
   const universities = useSelector(
@@ -10,17 +11,11 @@ const Universities = (props) => {
 
   return (
     <section className={styles.container}>
-      <ul className={styles.cards}>
+      <div className={`row ${styles.row}`}>
         {universities.map((uni, i) => {
-          return (
-            <li key={i} className={styles.li}>
-              {uni && ( //
-                <University uni={uni} />
-              )}
-            </li>
-          );
+          return <University key={i} uni={uni} />;
         })}
-      </ul>
+      </div>
     </section>
   );
 };

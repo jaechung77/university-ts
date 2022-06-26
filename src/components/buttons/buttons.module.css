@@ -1,30 +1,47 @@
+@value mediaQuery from '../../common/size.css';
+
 .container {
   width: 100%;
   display: flex;
   /* flex-direction: column; */
   justify-content: center;
+  align-items: stretch;
 }
 
 .button__load {
-  background-color: #00a6d7;
-  border: #00a6d7;
+  background-color: #00a6d7 !important;
+  border: #00a6d7 !important;
 }
 
 .button__delete {
-  background-color: #af3b6e;
-  border: #af3b6e;
+  background-color: #af3b6e !important;
+  border: #af3b6e !important;
 }
 
 .button__add {
-  background-color: #eee0cb;
-  border: #eee0cb;
-  color: black;
+  background-color: #eee0cb !important;
+  border: #eee0cb !important;
+  color: black !important;
 }
 
 .button__load,
 .button__delete,
 .button__add {
-  flex-basis: 25%;
-  margin: 1em 1em 1em 1em;
+  flex-basis: 33%;
+  /* margin: 1em; */
   font-weight: bold;
+}
+
+@media screen and (max-width: mediaQuery) {
+  .container {
+    flex-direction: column;
+  }
+  .button__load,
+  .button__delete,
+  .button__add {
+    flex-basis: 100%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
 }

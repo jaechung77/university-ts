@@ -12,7 +12,9 @@ function App() {
 
   return (
     <div className={styles.app}>
-      <Buttons />
+      <section className={styles.content}>
+        <Buttons />
+      </section>
       <section className={styles.content}>
         <Universities universities={universities} />
       </section>

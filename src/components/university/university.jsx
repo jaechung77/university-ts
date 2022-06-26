@@ -6,12 +6,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const University = ({ uni }) => {
   const { domains, web_pages, name, country, alpha_two_code } = uni;
   return (
-    <Card>
-      <h1>{name}</h1>
-      <p>Domains: {domains}</p>
-      <p>Country: {country}</p>
-      <p>Webpage: {web_pages}</p>
-      <p>Country Code: {alpha_two_code}</p>
+    <Card className={`col-lg-4 col-md-6 ${styles.card}`}>
+      <Card.Title className={styles.title}>{name}</Card.Title>
+      <Card.Text className={styles.text}>
+        <i className="fa-solid fa-house"></i>&nbsp; {domains}
+      </Card.Text>
+      <Card.Text className={styles.text}>
+        <i className="fa-solid fa-globe"></i>&nbsp; {country}
+      </Card.Text>
+      <Card.Text className={styles.text}>
+        <i className="fa-brands fa-chrome"></i>&nbsp; {web_pages}
+      </Card.Text>
+      <Card.Text className={styles.text}>
+        <i className="fa-solid fa-code"></i>
+        &nbsp; {alpha_two_code}
+      </Card.Text>
     </Card>
   );
 };

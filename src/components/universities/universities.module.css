@@ -1,6 +1,13 @@
 .container {
+  width: 100% !important;
+  padding-left: 22px;
 }
 
-.li {
+.row {
+  width: 100%;
+  display: flex !important;
+}
+
+.column {
   list-style: none;
 }
