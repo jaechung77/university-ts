@@ -6,6 +6,8 @@ import {
   deleteUniversity,
   addUniversity,
 } from '../../redux/actions/actions';
+import { Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Buttons = (props) => {
   const dispatch = useDispatch();
@@ -25,24 +27,17 @@ const Buttons = (props) => {
   };
 
   return (
-    <>
-      <ul className={styles.ul}>
-        <li>
-          <button className={styles.btn__load} onClick={handleClick}>
-            LOAD
-          </button>
-        </li>
-        <li>
-          <button className={styles.btn__delete} onClick={handleClick}>
-            DELETE
-          </button>
-          <button className={styles.btn__add} onClick={handleClick}>
-            ADD
-          </button>
-        </li>
-        <li></li>
-      </ul>
-    </>
+    <section className={styles.container}>
+      <Button className={styles.button__load} onClick={handleClick}>
+        LOAD
+      </Button>
+      <Button className={styles.button__delete} onClick={handleClick}>
+        DELETE
+      </Button>
+      <Button className={styles.button__add} onClick={handleClick}>
+        ADD
+      </Button>
+    </section>
   );
 };
 

@@ -12,8 +12,12 @@ const Universities = (props) => {
     <section className={styles.container}>
       <ul className={styles.cards}>
         {universities.map((uni, i) => {
-          uni && ( //
-            <University uni={uni} key={i} />
+          return (
+            <li key={i} className={styles.li}>
+              {uni && ( //
+                <University uni={uni} />
+              )}
+            </li>
           );
         })}
       </ul>

@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+}
+
+.button__load {
+  background-color: #00a6d7;
+  border: #00a6d7;
+}
+
+.button__delete {
+  background-color: #af3b6e;
+  border: #af3b6e;
+}
+
+.button__add {
+  background-color: #eee0cb;
+  border: #eee0cb;
+  color: black;
+}
+
+.button__load,
+.button__delete,
+.button__add {
+  flex-basis: 25%;
+  margin: 1em 1em 1em 1em;
+  font-weight: bold;
+}
