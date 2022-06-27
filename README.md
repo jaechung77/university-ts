@@ -1,5 +1,3 @@
-# Getting Started with Create React App
-
 # Purpose
 
 A Single Web Page that handles data from http://universities.hipolabs.com/search?country=Australia end point.
