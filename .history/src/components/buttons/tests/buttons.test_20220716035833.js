@@ -1,0 +1,25 @@
+import Buttons from '../buttons';
+import { screen, render as rtlRender } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import configureStore from 'redux-mock-store';
+import { Provider } from 'react-redux';
+
+describe('Buttons test', () => {
+  let onLoad;
+  let render;
+  beforeEach(() => {
+    render = (component) => {
+      <Provider store={store}>{component}</Provider>;
+    };
+  });
+  it('should call LOAD when load button is clicked', () => {
+    //Given
+    render(<Buttons />);
+    const button = screen.getByText('LOAD');
+    //When
+    //fireEvent or userEvent
+    userEvent.click(button);
+    //Then
+    expect(onLoad).toBe('LOAD');
+  });
+});

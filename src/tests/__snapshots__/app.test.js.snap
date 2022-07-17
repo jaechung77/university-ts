@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="app"
+>
+  <section
+    className="content"
+  >
+    <section
+      className="container"
+    >
+      <button
+        className="button__load btn btn-primary"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        LOAD
+      </button>
+      <button
+        className="button__delete btn btn-primary"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        DELETE
+      </button>
+      <button
+        className="button__add btn btn-primary"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        ADD
+      </button>
+    </section>
+  </section>
+  <section
+    className="content"
+  >
+    <section
+      className="container"
+    >
+      <div
+        className="row row"
+      />
+    </section>
+  </section>
+</div>
+`;
+
+exports[`App redners 1`] = `
+<div
+  className="app"
+>
+  <section
+    className="content"
+  >
+    <section
+      className="container"
+    >
+      <button
+        className="button__load btn btn-primary"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        LOAD
+      </button>
+      <button
+        className="button__delete btn btn-primary"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        DELETE
+      </button>
+      <button
+        className="button__add btn btn-primary"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        ADD
+      </button>
+    </section>
+  </section>
+  <section
+    className="content"
+  >
+    <section
+      className="container"
+    >
+      <div
+        className="row row"
+      />
+    </section>
+  </section>
+</div>
+`;

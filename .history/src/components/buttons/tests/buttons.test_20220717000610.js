@@ -1,0 +1,36 @@
+import Buttons from '../buttons';
+import { screen, render as rtlRender } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import store from '../../../redux/store';
+import { Provider } from 'react-redux';
+import renderer from 'react-test-renderer';
+
+describe('Buttons test', () => {
+  let render;
+  let str = '<Provider store={store}><Buttons /></Provider>)';
+
+  beforeEach(() => {
+    render = (component) =>
+      rtlRender(<Provider store={store}>{component}</Provider>);
+  });
+
+  it('renders', () => {
+    //Snapshot
+    const result = render(<Buttons />);
+    console.log('result>>>' + result.toString());
+    const component = renderer.create(str).toJSON();
+    console.log(component);
+    expect(component.toMatchSnapshot());
+  });
+
+  it('should call LOAD when load button is clicked', () => {
+    //Given
+    render(<Buttons />);
+    const button = screen.getByText('LOAD');
+    //When
+    //fireEvent or userEvent
+    userEvent.click(button);
+    //Then
+    expect(button).toString().includes('LOAD');
+  });
+});
